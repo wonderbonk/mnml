@@ -5,16 +5,41 @@
 /* Colors
    ========================================================================== */
 
-/* Don't use black */
+/* NEXUS Personal OS Color System */
 
-$near-black:  #111;
-$white: #fff;
+/* Base - Void & Light */
+$void: #000000;
+$near-black: #0a0a0a;
+$white: #ffffff;
 
-/* Gray scale */
+/* Cyberpunk Neons */
+$terminal-green: #00ff41;
+$cyber-cyan: #00ffff;
+$cyber-magenta: #ff00ff;
+$neon-pink: #ff006e;
+$electric-blue: #0066ff;
 
-$gray-dark:   #222;
-$gray-medium: #999;
-$gray-light:  #eee;
+/* Lumon Corporate */
+$lumon-blue: #0066cc;
+$lumon-white: #f8f8f8;
+$lumon-gray: #4a4a4a;
+
+/* Cosmic Gradients */
+$cosmic-purple: #9d4edd;
+$cosmic-violet: #7209b7;
+$nebula-blue: #3a0ca3;
+$deep-space: #0d1b2a;
+
+/* Functional */
+$warning-amber: #ffaa00;
+$error-red: #ff0033;
+$success-green: #00ff88;
+
+/* Transparency Layers */
+$ghost-10: rgba(255, 255, 255, 0.1);
+$ghost-20: rgba(255, 255, 255, 0.2);
+$ghost-05: rgba(255, 255, 255, 0.05);
+$shadow: rgba(0, 0, 0, 0.8);
 
    
 /* Type Scale
