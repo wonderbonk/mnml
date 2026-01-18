@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NEXUS // Personal Operating System</title>
+    <meta name="author" content="NEXUS">
+    <meta name="description" content="Graph-based personal operating system">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/i.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- CRT Scan Lines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- System Header -->
+    <header class="system-header">
+      <div class="header-left">
+        <span class="logo">NEXUS</span>
+        <span class="version">v1.0.0</span>
+      </div>
+      <div class="header-center">
+        <span class="system-time" id="systemTime">--:--:--</span>
+      </div>
+      <div class="header-right">
+        <span class="ai-status" id="aiStatus">
+          <span class="status-indicator pulse"></span>
+          AI:ACTIVE
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="nexus-container">
+
+      <!-- Module Selector Sidebar -->
+      <aside class="module-selector">
+        <nav class="module-nav">
+          <button class="module-btn active" data-module="graph">
+            <span class="module-icon">◈</span>
+            <span class="module-label">GRAPH</span>
+          </button>
+          <button class="module-btn" data-module="physical">
+            <span class="module-icon">◆</span>
+            <span class="module-label">PHYSICAL</span>
+          </button>
+          <button class="module-btn" data-module="work">
+            <span class="module-icon">◇</span>
+            <span class="module-label">WORK</span>
+          </button>
+          <button class="module-btn" data-module="design">
+            <span class="module-icon">◈</span>
+            <span class="module-label">DESIGN</span>
+          </button>
+          <button class="module-btn" data-module="music">
+            <span class="module-icon">◆</span>
+            <span class="module-label">MUSIC</span>
+          </button>
+          <button class="module-btn" data-module="ai">
+            <span class="module-icon">◇</span>
+            <span class="module-label">AI</span>
+          </button>
+        </nav>
+
+        <div class="module-stats">
+          <div class="stat-item">
+            <span class="stat-label">NODES</span>
+            <span class="stat-value" id="nodeCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">EDGES</span>
+            <span class="stat-value" id="edgeCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">ENERGY</span>
+            <span class="stat-value" id="graphEnergy">0%</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Graph Visualization Area -->
+      <main class="visualization-area">
+        <canvas id="graphCanvas" class="graph-canvas"></canvas>
+
+        <!-- Module-specific overlays -->
+        <div class="module-overlay" id="moduleOverlay">
+          <!-- Dynamic module content injected here -->
+        </div>
+
+        <!-- Node Detail Panel -->
+        <div class="detail-panel hidden" id="detailPanel">
+          <div class="panel-header">
+            <h3 class="panel-title" id="detailTitle">NODE DETAILS</h3>
+            <button class="panel-close" id="closeDetail">×</button>
+          </div>
+          <div class="panel-content" id="detailContent">
+            <!-- Dynamic node details -->
+          </div>
+        </div>
+
+        <!-- Holographic Effect Layer -->
+        <div class="hologram-layer"></div>
+      </main>
+    </div>
+
+    <!-- Terminal / Command Input -->
+    <footer class="terminal">
+      <div class="terminal-output" id="terminalOutput">
+        <div class="terminal-line">
+          <span class="prompt">NEXUS></span>
+          <span class="output">System initialized. Graph engine online.</span>
+        </div>
+      </div>
+      <div class="terminal-input-wrapper">
+        <span class="prompt">NEXUS></span>
+        <input
+          type="text"
+          class="terminal-input"
+          id="terminalInput"
+          placeholder="Enter command or chat with AI..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+    </footer>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="js/nexus.js"></script>
+  </body>
+</html>

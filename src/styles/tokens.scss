@@ -1,0 +1,322 @@
+// =============================================================================
+// NEXUS TERMINAL - RETRO CYBERPUNK DESIGN TOKENS
+// =============================================================================
+
+:root {
+  // ----------------------------------------------------------------------------
+  // COLOR SYSTEM - Base Palette
+  // ----------------------------------------------------------------------------
+
+  // Voids & Blacks
+  --void: #000000;
+  --near-black: #0a0a0a;
+  --deep-black: #050505;
+
+  // Matrix Theme (Default)
+  --terminal-green: #00ff41;
+  --terminal-green-dim: #00cc33;
+  --terminal-green-bright: #66ff88;
+  --matrix-bg: #0d0208;
+  --matrix-surface: #001a0d;
+
+  // Cyberpunk Neons
+  --cyber-cyan: #00ffff;
+  --cyber-magenta: #ff00ff;
+  --cyber-yellow: #ffff00;
+  --cyber-pink: #ff69b4;
+  --cyber-purple: #9d4edd;
+  --cyber-blue: #00d9ff;
+
+  // Lumon Theme
+  --lumon-blue: #0066cc;
+  --lumon-blue-light: #4d94ff;
+  --lumon-blue-dark: #003d7a;
+  --lumon-bg: #f0f4f8;
+  --lumon-surface: #ffffff;
+
+  // Star Wars Theme
+  --empire-red: #ff0000;
+  --rebel-orange: #ff6b35;
+  --jedi-blue: #00bfff;
+  --sith-crimson: #dc143c;
+  --starwars-gold: #ffd700;
+
+  // Utility Colors
+  --warning-amber: #ffaa00;
+  --error-red: #ff3333;
+  --success-green: #00ff00;
+  --info-blue: #00ccff;
+
+  // ----------------------------------------------------------------------------
+  // THEME VARIABLES (Default: Matrix)
+  // ----------------------------------------------------------------------------
+
+  --bg-primary: var(--matrix-bg);
+  --bg-secondary: var(--matrix-surface);
+  --bg-tertiary: #001a14;
+
+  --fg-primary: var(--terminal-green);
+  --fg-secondary: var(--terminal-green-dim);
+  --fg-tertiary: #006622;
+
+  --accent-primary: var(--terminal-green);
+  --accent-secondary: var(--cyber-cyan);
+  --accent-glow: rgba(0, 255, 65, 0.5);
+
+  --border-color: rgba(0, 255, 65, 0.3);
+  --border-glow: 0 0 10px var(--accent-glow);
+
+  // ----------------------------------------------------------------------------
+  // TYPOGRAPHY
+  // ----------------------------------------------------------------------------
+
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-display: 'Space Grotesk', -apple-system, system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;    // 12px
+  --font-size-sm: 0.875rem;   // 14px
+  --font-size-base: 1rem;     // 16px
+  --font-size-lg: 1.125rem;   // 18px
+  --font-size-xl: 1.25rem;    // 20px
+  --font-size-2xl: 1.5rem;    // 24px
+  --font-size-3xl: 2rem;      // 32px
+  --font-size-4xl: 2.5rem;    // 40px
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  // ----------------------------------------------------------------------------
+  // SPACING
+  // ----------------------------------------------------------------------------
+
+  --space-1: 0.25rem;   // 4px
+  --space-2: 0.5rem;    // 8px
+  --space-3: 0.75rem;   // 12px
+  --space-4: 1rem;      // 16px
+  --space-5: 1.25rem;   // 20px
+  --space-6: 1.5rem;    // 24px
+  --space-8: 2rem;      // 32px
+  --space-10: 2.5rem;   // 40px
+  --space-12: 3rem;     // 48px
+  --space-16: 4rem;     // 64px
+
+  // ----------------------------------------------------------------------------
+  // EFFECTS & SHADOWS
+  // ----------------------------------------------------------------------------
+
+  // Text Glows
+  --text-glow-sm: 0 0 5px currentColor;
+  --text-glow-md: 0 0 10px currentColor, 0 0 20px currentColor;
+  --text-glow-lg: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  --text-glow-xl: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor;
+
+  // Box Glows
+  --box-glow-sm: 0 0 5px var(--accent-glow);
+  --box-glow-md: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-glow);
+  --box-glow-lg: 0 0 15px var(--accent-glow), 0 0 30px var(--accent-glow);
+  --box-glow-xl: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow), 0 0 60px var(--accent-glow);
+
+  // Inner Glows
+  --inner-glow-sm: inset 0 0 20px rgba(0, 255, 65, 0.1);
+  --inner-glow-md: inset 0 0 40px rgba(0, 255, 65, 0.15);
+  --inner-glow-lg: inset 0 0 60px rgba(0, 255, 65, 0.2);
+
+  // Shadows
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.8);
+
+  // CRT Effects
+  --scanline-opacity: 0.08;
+  --scanline-speed: 8s;
+  --chromatic-aberration: 2px;
+  --noise-intensity: 0.03;
+  --crt-curvature: 4px;
+  --flicker-intensity: 0.02;
+
+  // ----------------------------------------------------------------------------
+  // BORDERS & RADIUS
+  // ----------------------------------------------------------------------------
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  // ----------------------------------------------------------------------------
+  // ANIMATION
+  // ----------------------------------------------------------------------------
+
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 1000ms;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-sharp: cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  // ----------------------------------------------------------------------------
+  // Z-INDEX LAYERS
+  // ----------------------------------------------------------------------------
+
+  --z-base: 0;
+  --z-canvas: 1;
+  --z-ui: 10;
+  --z-overlay: 20;
+  --z-modal: 30;
+  --z-terminal: 40;
+  --z-dropdown: 50;
+  --z-tooltip: 60;
+  --z-scanlines: 100;
+  --z-cursor: 9999;
+
+  // ----------------------------------------------------------------------------
+  // LAYOUT
+  // ----------------------------------------------------------------------------
+
+  --header-height: 60px;
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 60px;
+  --terminal-min-height: 60px;
+  --terminal-max-height: 600px;
+  --terminal-default-height: 300px;
+
+  --container-max-width: 1920px;
+  --content-max-width: 1400px;
+}
+
+// =============================================================================
+// THEME PRESETS
+// =============================================================================
+
+// Matrix Theme (Default - Already set above)
+[data-theme="matrix"] {
+  --bg-primary: var(--matrix-bg);
+  --bg-secondary: var(--matrix-surface);
+  --bg-tertiary: #001a14;
+
+  --fg-primary: var(--terminal-green);
+  --fg-secondary: var(--terminal-green-dim);
+  --fg-tertiary: #006622;
+
+  --accent-primary: var(--terminal-green);
+  --accent-secondary: var(--cyber-cyan);
+  --accent-glow: rgba(0, 255, 65, 0.5);
+
+  --border-color: rgba(0, 255, 65, 0.3);
+}
+
+// Lumon Theme (Severance)
+[data-theme="lumon"] {
+  --bg-primary: #0a1628;
+  --bg-secondary: #152238;
+  --bg-tertiary: #1e2d47;
+
+  --fg-primary: var(--lumon-blue-light);
+  --fg-secondary: var(--lumon-blue);
+  --fg-tertiary: var(--lumon-blue-dark);
+
+  --accent-primary: var(--lumon-blue);
+  --accent-secondary: #00ccff;
+  --accent-glow: rgba(0, 102, 204, 0.5);
+
+  --border-color: rgba(77, 148, 255, 0.3);
+}
+
+// Star Wars Theme
+[data-theme="starwars"] {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #1a1a1a;
+
+  --fg-primary: var(--starwars-gold);
+  --fg-secondary: var(--rebel-orange);
+  --fg-tertiary: var(--jedi-blue);
+
+  --accent-primary: var(--starwars-gold);
+  --accent-secondary: var(--jedi-blue);
+  --accent-glow: rgba(255, 215, 0, 0.5);
+
+  --border-color: rgba(255, 215, 0, 0.4);
+}
+
+// Cyberpunk Theme
+[data-theme="cyberpunk"] {
+  --bg-primary: #0d0221;
+  --bg-secondary: #1a0b3d;
+  --bg-tertiary: #2d1454;
+
+  --fg-primary: var(--cyber-cyan);
+  --fg-secondary: var(--cyber-magenta);
+  --fg-tertiary: var(--cyber-purple);
+
+  --accent-primary: var(--cyber-cyan);
+  --accent-secondary: var(--cyber-magenta);
+  --accent-glow: rgba(0, 255, 255, 0.5);
+
+  --border-color: rgba(0, 255, 255, 0.3);
+}
+
+// =============================================================================
+// UTILITY CLASSES
+// =============================================================================
+
+.glow-text {
+  text-shadow: var(--text-glow-md);
+}
+
+.glow-text-sm {
+  text-shadow: var(--text-glow-sm);
+}
+
+.glow-text-lg {
+  text-shadow: var(--text-glow-lg);
+}
+
+.glow-text-xl {
+  text-shadow: var(--text-glow-xl);
+}
+
+.glow-box {
+  box-shadow: var(--box-glow-md);
+}
+
+.glow-box-sm {
+  box-shadow: var(--box-glow-sm);
+}
+
+.glow-box-lg {
+  box-shadow: var(--box-glow-lg);
+}
+
+.glow-box-xl {
+  box-shadow: var(--box-glow-xl);
+}
+
+.crt-text {
+  font-family: var(--font-mono);
+  color: var(--fg-primary);
+  text-shadow: var(--text-glow-sm);
+  letter-spacing: 0.05em;
+}
+
+.neon-border {
+  border: var(--border-width-medium) solid var(--border-color);
+  box-shadow: var(--border-glow), var(--inner-glow-sm);
+}

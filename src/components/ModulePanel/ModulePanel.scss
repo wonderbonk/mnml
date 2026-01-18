@@ -1,0 +1,45 @@
+@import '@styles/tokens.scss';
+
+.module-panel {
+  width: var(--sidebar-width);
+  height: 100%;
+  background: var(--bg-secondary);
+  border-left: var(--border-width-medium) solid var(--border-color);
+  box-shadow: var(--box-glow-sm);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--space-6);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--accent-primary),
+      transparent
+    );
+  }
+}
+
+@media (max-width: 1024px) {
+  .module-panel {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-panel {
+    position: fixed;
+    right: 0;
+    top: var(--header-height);
+    bottom: var(--terminal-min-height);
+    z-index: var(--z-overlay);
+  }
+}
